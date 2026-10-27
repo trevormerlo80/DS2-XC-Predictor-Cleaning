@@ -6,7 +6,7 @@ library(readr)
 library(lubridate)
 
 
-gp26 <- read_delim("RStudio_Projects/Race_Predictor/gp26", delim = " ")
+gp26 <- read_delim("gp26", delim = " ")
 
 gp26_clean <- gp26 |> 
   mutate(Name = paste(First, Last)) |> 
@@ -17,7 +17,7 @@ gp26_clean <- gp26 |>
 
 
 
-gp25 <- read_delim("RStudio_Projects/Race_Predictor/gp25", delim = " ")
+gp25 <- read_delim("gp25", delim = " ")
 
 gp25_clean <- gp25 |> 
   mutate(Name = paste(First, Last)) |> 
@@ -25,7 +25,7 @@ gp25_clean <- gp25 |>
   select(Name, Time)
 
 
-dls25 <- read_delim("RStudio_Projects/Race_Predictor/dls25", delim = " ")
+dls25 <- read_delim("dls25", delim = " ")
 
 dls25_clean <- dls25 |> 
   mutate(Name = paste(First, Last)) |> 
@@ -37,7 +37,7 @@ join25 <- inner_join(gp25_clean, dls25_clean, by = "Name")
 
 
 
-gp24 <- read_delim("RStudio_Projects/Race_Predictor/gp24", delim = " ")
+gp24 <- read_delim("gp24", delim = " ")
 
 gp24_clean <- gp24 |> 
   mutate(Name = paste(First, Last)) |> 
@@ -45,7 +45,7 @@ gp24_clean <- gp24 |>
   select(Name, Time)
 
 
-dls24 <- read_delim("RStudio_Projects/Race_Predictor/dls24", delim = " ")
+dls24 <- read_delim("dls24", delim = " ")
 
 dls24_clean <- dls24 |> 
   mutate(Name = paste(First, Last)) |> 
@@ -57,7 +57,7 @@ join24 <- inner_join(gp24_clean, dls24_clean, by = "Name")
 
 
 
-gp23 <- read_delim("RStudio_Projects/Race_Predictor/gp23", delim = " ")
+gp23 <- read_delim("gp23", delim = " ")
 
 gp23_clean <- gp23 |> 
   mutate(Name = paste(First, Last)) |> 
@@ -65,7 +65,7 @@ gp23_clean <- gp23 |>
   select(Name, Time)
 
 
-dls23 <- read_delim("RStudio_Projects/Race_Predictor/dls23", delim = " ")
+dls23 <- read_delim("dls23", delim = " ")
 
 dls23_clean <- dls23 |> 
   mutate(Name = paste(First, Last)) |> 
@@ -113,7 +113,7 @@ sprintf(
 
 
 
-dls26 <- read_delim("RStudio_Projects/Race_Predictor/dls26", delim = " ")
+dls26 <- read_delim("dls26", delim = " ")
 
 dls26_clean <- dls26 |> 
   mutate(Name = paste(First, Last)) |> 
